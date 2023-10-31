@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Форма входа</title>
+  <script>
+    function checkLogin() {
+      var login = document.getElementById("login").value;
+      var password = document.getElementById("password").value;
+      if (login === "admin" && password === "admin") {
+        // Перенаправление на следующую страницу
+        window.location.href = "edik.html";
+      } else if (login === "user1" && password === "123456") {
+        // Перенаправление на следующую страницу
+        alert("Не хватает полномочий для просмотра следущей страницы");
+      } 
+     else if (login === "user2" && password === "") {
+        // Перенаправление на следующую страницу
+        window.location.href="readandwrite.html";
+      } 
+      else {
+        alert("Не хватает полномочий для просмотра следущей страницы");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Форма входа</h1>
+  <form>
+    <label for="login">Логин:</label>
+    <input type="text" id="login" name="login" required><br><br>
+    
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <input type="button" value="Вход" onclick="checkLogin()">
+  </form>
+</body>
+</html>
