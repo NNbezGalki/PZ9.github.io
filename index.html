@@ -9,11 +9,10 @@
         // Перенаправление на следующую страницу
         window.location.href = "edik.html";
       } else if (login === "user1" && password === "123456") {
-        // Перенаправление на следующую страницу
         alert("Не хватает полномочий для просмотра следущей страницы");
       } 
-     else if (login === "user2" && password === "654321") {
-        // Перенаправление на следующую страницу
+     else if (login === "user2" && password === "654321")
+     {
         window.location.href="readandwrite.html";
       } 
       else {
@@ -27,10 +26,8 @@
   <form>
     <label for="login">Логин:</label>
     <input type="text" id="login" name="login" required><br><br>
-    
     <label for="password">Пароль:</label>
     <input type="password" id="password" name="password" required><br><br>
-    
     <input type="button" value="Вход" onclick="checkLogin()">
   </form>
 </body>
